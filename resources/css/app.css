@@ -1,0 +1,64 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+[x-cloak] { display: none !important; }
+
+:root {
+    --primary-color: #85B539;
+    --secondary-color: #DAE9C4;
+}
+
+.btn:disabled {
+    @apply opacity-75;
+}
+
+.text--primary {
+    color: var(--primary-color);
+}
+
+.bg--primary {
+    background-color: var(--primary-color);
+}
+
+.bg--secondary {
+    background-color: var(--secondary-color);
+}
+
+.btn--primary {
+    @apply text-white;
+    background-color: var(--primary-color);
+}
+.btn--primary-outlined {
+    @apply bg-white;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.border--primary {
+    border-color: var(--primary-color);
+}
+
+a {
+    @apply underline text-blue-600;
+}
+
+.h-body {
+    height: calc(calc(100vh - calc(100vh - 100%)) - 78px);
+}
+.min-h-body {
+    min-height: calc(calc(100vh - calc(100vh - 100%)) - 78px);
+}
+
+.btn-checkbox:checked + * {
+    border-color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+.btn-checkbox:disabled + * {
+    opacity: 0.7;
+}
